@@ -1,12 +1,7 @@
 '''
 AUTHOR: Chisom Samson Nwachukwu
 
-PURPOSE: W04 Prove: Word Puzzle
-
-Shows Creativity and Exceeds Requirements: 
-    Line 19: I used the random.choice() function to select a word from a list
-    Line 18 & 54: I introduced a while loop to enable the user play again
-    Line 27 - 36: I used a function to give the hints to a player
+PURPOSE: Word Puzzle Game
 '''
 import random
 
@@ -19,6 +14,7 @@ play_again = 'yes'
 #for i, secret in enumerate(secret_word):
 while play_again == 'yes':
 
+    print()
     # randomly selects a new word for every play
     secret_word = random.choice(['ensign', 'brigham', 'worldwide', 'puzzle', 'pathway', 'python', 'github']) 
     secret_word_len = len(secret_word) # Gets the length of the secret work
@@ -41,7 +37,7 @@ while play_again == 'yes':
         guess_word = input('Make your guess: ').lower()
         guess_word_len = len(guess_word)
 
-        guess_count = guess_count + 1
+        guess_count += 1
 
         if secret_word_len != guess_word_len:
             print(f'Word\'s length does not match. Secret word is {secret_word_len} letters')
