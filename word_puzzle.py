@@ -20,7 +20,7 @@ play_again = 'yes'
 while play_again == 'yes':
 
     # randomly selects a new word for every play
-    secret_word = random.choice(['ensign', 'brigham', 'worldwide', 'puzzle', 'pathway', 'python']) 
+    secret_word = random.choice(['ensign', 'brigham', 'worldwide', 'puzzle', 'pathway', 'python', 'github']) 
     secret_word_len = len(secret_word) # Gets the length of the secret work
 
     guess_count = 0 # Reset guess_count for the new game
