@@ -18,8 +18,9 @@ play_again = 'yes'
 
 #for i, secret in enumerate(secret_word):
 while play_again == 'yes':
-    
-    secret_word = random.choice(['ensign', 'brigham', 'worldwide', 'puzzle', 'pathway']) # randomly selects a new word for each loop
+
+    # randomly selects a new word for every play
+    secret_word = random.choice(['ensign', 'brigham', 'worldwide', 'puzzle', 'pathway', 'python']) 
     secret_word_len = len(secret_word) # Gets the length of the secret work
 
     guess_count = 0 # Reset guess_count for the new game
