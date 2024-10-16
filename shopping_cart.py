@@ -1,7 +1,8 @@
 '''
 AUTHOR: CHISOM NWACHUKWU
 
-PURPOSE: Learning Activity (1 of 2): Lists
+PURPOSE: Playing around Lists in Python
+
 '''
 
 features = ['Add item', 'View cart', 'Remove item', 'Compute total', 'Quit']
@@ -13,11 +14,11 @@ sums = 0
 print('\nWelcome to the Shopping Cart Program!')
 print('\nPlease select one of the following:')
 
-for i in range(len(features)):
-    print(f'{i + 1}. {features[i]}')
-
 while action != 5:
     print()
+
+    for i in range(len(features)):
+        print(f'{i + 1}. {features[i]}')
 
     action = int(input('Please enter an action: '))
 
@@ -44,7 +45,7 @@ while action != 5:
             for i in range(len(shopping_cart)):
                 for j in range(len(price_list)):
                     if i == j:
-                        print(f'{i + 1}. {shopping_cart[i]} - {price_list[j]}')
+                        print(f'{i + 1}. {shopping_cart[i]} - ${price_list[i]:.2f}')
                     
     elif action == 3:
         print()
@@ -54,7 +55,7 @@ while action != 5:
             for i in range(len(shopping_cart)):
                 for j in range(len(price_list)):
                     if i == j:
-                        print(f'{i + 1}. {shopping_cart[i]} - {price_list[i]:.2f}')
+                        print(f'{i + 1}. {shopping_cart[i]} - ${price_list[i]:.2f}')
 
         print('\nWhich item would you like to remove? ')
         remove_item = int(input('Item number: '))
@@ -71,7 +72,7 @@ while action != 5:
         for total in price_list:
             sums += total
         # sums = sum(price_list)
-        print(f'\nThe total price of the items in the shopping cart is {sums:.2f}')
+        print(f'\nThe total price of the items in the shopping cart is ${sums:.2f}')
 
     elif action == 5:
         print('Thank you. Goodbye.')
